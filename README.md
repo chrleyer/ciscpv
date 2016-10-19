@@ -3,6 +3,8 @@
 
 This project requires you to have already an account at [PVoutput.org](http://pvoutput.org) and your inverter or data collection device is uploading data or data get’s pulled from the inverter to PVoutput. There are many ways to upload data from your solar system, see here for details. For our Samil inverter we are using this Python3 script from [Maarten Visscher](https://github.com/mhvis/solar).
 
+![alt tag](https://raw.githubusercontent.com/chrleyer/ciscpv/master/SCR_20161019_001957.jpg)
+
 In this article I describe only how to download the statistic portlet data from PVoutput.org using a PHP script, generating a PNG idle background image and configure a Cisco 7941 / 7942(G) / 7945 / 7961 / 7962(G) / 7965 / 7970 / 7971 / 7972 / 7975(G) and possibly other phones of the 79xx series. It may also work on the 7940/7960 but this possibly requires some changes because this phones needs GIF2XML converted files. Some details [here](https://supportforums.cisco.com/document/97571/changing-background-image-cisco-ip-phone-79407960).
 
 The phones we are using are 7941G and 7961G with SIP firmware. If you are on SIP, probably using Asterisk or another SIP PBX like the Fritzbox, you are maybe already familiar with the configuration using XML files on your TFTP server. Phones with SCCP firmware on Cisco Callmanager can also be configured, but this means admin access to the Callmanager, because the idle URL configuartion can only be done at the server side. Details on Cisco SCCP idle URL config you may find [here](http://www.cisco.com/c/en/us/support/docs/voice-unified-communications/unified-communications-manager-callmanager/42573-idle-url.html#topic4).
