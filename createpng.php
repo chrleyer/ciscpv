@@ -5,7 +5,7 @@
     $height = 140;
 
  // Set PVoutput.org portlet URL // Replace XXXXX with your own SID here
-    $url = "http://pvoutput.org/portlet/r1/getstatus.jsp?sid=XXXXX";
+    $url = "https://pvoutput.org/portlet/r1/getstatus.jsp?sid=XXXXX";
 
 function curl_download($Url){
  
@@ -23,10 +23,10 @@ function curl_download($Url){
     curl_setopt($ch, CURLOPT_URL, $Url);
  
     // Set a referer for PVoutput.org, enter this URL at your PVoutput API profile
-    curl_setopt($ch, CURLOPT_REFERER, "http://IP-OR-FQDN/cisco/idle/createpng.php");
+    curl_setopt($ch, CURLOPT_REFERER, "http://FQDN/cisco/idle/createpng.php");
  
     // User agent (we simulate a Linux Firefox here)
-    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/31.0");
+    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (X11; Linux i586; rv:49.0) Gecko/20100101 Firefox/49.0");
  
     // Include header in result? (0 = yes, 1 = no)
     curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -35,7 +35,7 @@ function curl_download($Url){
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
  
     // Timeout in seconds
-    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 15);
  
     // Download the given URL, and return output
     $output = curl_exec($ch);
