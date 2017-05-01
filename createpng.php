@@ -22,7 +22,7 @@ function curl_download($Url){
     // Set URL to download
     curl_setopt($ch, CURLOPT_URL, $Url);
  
-    // Set a referer for PVoutput.org, enter this URL at your PVoutput API profile
+    // Set a referer for PVoutput.org, enter this URL at your PVoutput API profile (Settings), if not set the result will contain an emtpy sting
     curl_setopt($ch, CURLOPT_REFERER, "http://FQDN/cisco/idle/createpng.php");
  
     // User agent (we simulate a Linux Firefox here)
